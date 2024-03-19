@@ -32,7 +32,8 @@
                 "/styles/index.css"
             ],
             "matches": [
-                "https://*/*"
+                "https://*/*",
+                "http://*/*"
             ]
         }
     ]
