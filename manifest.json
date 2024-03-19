@@ -1,0 +1,39 @@
+{
+    "manifest_version": 3,
+    "name": "Scroll-Top",
+    "description": "Scroll to top browser plugin",
+    "version": "0.1",
+    "action": {
+        "default_popup": "/popup/index.html",
+        "default_icon": {
+            "64": "/icons/logo.png"
+        }
+    },
+    "content_scripts": [
+        {
+            "js": [
+                "/content/index.js"
+            ],
+            "all_frames": true,
+            "matches": [
+                "<all_urls>"
+            ],
+            "run_at": "document_start"
+        }
+    ],
+    "background": {
+        "service_worker": "/background/index.js"
+    },
+    "permissions": [],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "/assets/logo.png",
+                "/styles/index.css"
+            ],
+            "matches": [
+                "https://*/*"
+            ]
+        }
+    ]
+}
